@@ -1,0 +1,63 @@
+/* 
+@keyframes example {
+    0%   {background-color:skyblue;}
+    50%  {background-color:pink;;}
+    100%  {background-color:rgb(187, 245, 245);}
+  }
+
+section {
+    background-color: rgb(187, 245, 245);
+    animation-duration: 4s;
+    animation-name: example;
+    text-align: center;
+    font-style:normal;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    padding: 2rem;
+    margin: 0;
+    animation-iteration-count: infinite;
+    height: 100%;
+  } */
+
+  img {
+   
+     width: 40rem;
+     /* align-content: right; */
+    /* height: 30rem;  */
+    /* animation: example2 infinite 20s linear; */
+    pointer-events: none;
+  }
+  
+
+  /* @keyframes example2 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(90deg);
+    }
+  } */
+
+  .button {
+    background-color: darkturquoise; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .button1 {
+    background-color: white; /* Green */
+    border:none;
+  
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
