@@ -12,6 +12,7 @@ import { cris } from './crisnat/cris';
 import { RouterModule } from '@angular/router'
 import { footer } from './footer/footer';
 import {MatIconModule} from '@angular/material/icon';
+import { products } from './products/products';
 @NgModule({
   declarations: [
     AppComponent, 
@@ -20,7 +21,8 @@ import {MatIconModule} from '@angular/material/icon';
     about,
     MaterialElevationDirective,
     cris,
-    footer
+    footer,
+    products,
   ],
   imports: [
     BrowserModule,
