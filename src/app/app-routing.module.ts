@@ -11,7 +11,6 @@ const routes: Routes =[
   {path:'about', component: about},
   {path:'cris', component:cris},
   {path:'products', component:products},
-  {path: 'footer',component:footer},
   {path:'',component:cris}
 ];
 
