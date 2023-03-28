@@ -40,7 +40,7 @@ export class products{
         },
         {
             title: "Sharotary",
-            description: "This is and android application for writing stories. Yes, we listen you! People who lack to talk to someone can share their thoughts and story here.",
+            description: "This is an android application for writing stories. Yes, we listen you! People who lack to talk to someone can share their thoughts and story here.",
             image: "./assets/logo.png",
             preview: "https://developer.crisnat.com/",
             previewtext: "Try Now"

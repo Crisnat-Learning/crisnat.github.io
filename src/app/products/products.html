@@ -1,48 +1,56 @@
-<div class="container">
+<div class="container mb-40 mt-20">
   <div class="row">
-    <div class="mt-20 font-segoe-ui text-8xl font-bold text-center">
-      <br> Our Products</div>
+    <div class="mt-20 font-segoe-ui text-7xl font-bold mb-10 text-center transform hover:rotate-x-12 hover:rotate-y-12 transition duration-500 ease-in-out perspective-1000">
+      Our Products
+    </div>
     <p class="text-2xl text-gray-500 text-center">
-      <br><br><br>
       We have offered various free services, which includes android applications, blogs, coding solutions and many more!
-      <br><br>You can also download and enjoy them for free. some of them are listed below.
+      You can also download and enjoy them for free. some of them are listed below.
     </p>
   </div>
 </div>
 
+<div class="container mb-20 mx-auto max-w-full">
+  <div *ngFor="let left_product of left_products; let i=index">
 
-<div *ngFor="let left_product of left_products; let i=index">
+    <div class="grid grid-cols-3 gap-4  mt-10">
 
-  <div class="container">
-
-    <div class="row">
-      <div class="col-lg-8 col-md-8 col-sm-8 items-center">
-        <div class="mt-5 font-segoe-ui text-5xl font-bold text-center pl-64">
+      <div class="container col-span-2 items-center">
+        <div class="font-segoe-ui text-5xl font-bold text-center">
           {{left_product.title}}</div>
-        <p class="text-lg text-gray-500 pl-64 font-serif text-center">
+        <p class="text-lg text-gray-500 font-serif text-center mt-3">
           {{left_product.description}}
         </p>
-        <a *ngIf="left_product?.preview" href={{left_product.preview}} target="_blank"><button
-            class="bg-darkturquoise mt-10 border-0 text-white px-8 py-4 text-center no-underline inline-block text-lg">{{left_product.previewtext}}</button></a>
+        <div *ngIf="left_product?.previewtext" class="bg-darkturquoise text-lg inline-block px-6 py-2 mt-10 element relative left-1/2 transform -translate-x-1/2">
+          <a href={{left_product.preview}} target="_blank"><button
+              class="text-white">{{left_product.previewtext}}</button></a>
+        </div>
       </div>
-      <div class="col-lg-4 col-md-4 col-sm-4 items-center">
-        <img class="order-last sm:order-first" src={{left_product.image}} />
-      </div>
-    </div>
 
-    <div class="row">
-      <div class="col-lg-4 col-md-4 col-sm-4 items-center">
-        <img src={{right_products[i].image}} />
+
+      <div class="container h-64">
+        <img class="order-last sm:order-first max-h-full" src={{left_product.image}} />
       </div>
-      <div class="col-lg-8 col-md-8 col-sm-8">
-        <div class="mt-5 font-segoe-ui text-5xl font-bold text-center">
+
+
+      <div *ngIf="right_products[i]?.image" class="container h-64">
+        <img class="max-h-full" src={{right_products[i].image}} />
+      </div>
+
+
+      <div *ngIf="right_products[i]?.title" class="container col-span-2">
+        <div class="font-segoe-ui text-5xl font-bold text-center">
           {{right_products[i].title}}</div>
-        <p class="text-gray-500 text-lg pl-20 font-serif text-center">
+        <p class="text-gray-500 text-lg font-serif text-center mt-3">
           {{right_products[i].description}}
         </p>
-        <a *ngIf="right_products[i]?.preview" href={{right_products[i].preview}}
-          target="_blank"><button class="button-for-dev">{{right_products[i].previewtext}}</button></a>
+        <div *ngIf="right_products[i]?.preview" class="bg-darkturquoise text-lg inline-block px-6 py-2 mt-10 element relative left-1/2 transform -translate-x-1/2">
+          <a href={{right_products[i].preview}} target="_blank"><button
+              class="text-white">{{right_products[i].previewtext}}</button></a>
+        </div>
       </div>
+
+
     </div>
-</div>
+  </div>
 </div>
