@@ -1,12 +1,12 @@
-
+/* 
 @keyframes example {
   0%   {background-color:skyblue;}
   50%  {background-color:pink;;}
   100%  {background-color:rgb(187, 245, 245);}
-}
+} */
 
 /* The element to apply the animation to */
-h2 {
+/* h2 {
   background-color: rgb(187, 245, 245);
   animation-duration: 4s;
   animation-name: example;
@@ -64,4 +64,4 @@ mat-card-title{
 }
 mat-card-subtitle{
   color: white;
-}
+} */
