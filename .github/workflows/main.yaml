@@ -26,15 +26,11 @@ jobs:
         with:
           name: deploy_dist
           path: dist
-      - name: Copy index.html to 404.html
-        uses: actions/upload-artifact@v2
+      - name: copy file
+        uses: canastro/copy-file-action@master
         with:
-          name: index.html
-          path: docs/index.html
-        id: copy-index
-
-      - name: Rename artifact to 404.html
-        run: mv "${{ steps.copy-index.outputs.artifact_path }}" docs/404.html
+          source: "index.html"
+          target: "404.html"
   deploy:
     runs-on: ubuntu-latest
     needs: build
