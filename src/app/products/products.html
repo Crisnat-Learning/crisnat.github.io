@@ -13,9 +13,9 @@
 <div class="container mb-20 mx-auto max-w-full">
   <div *ngFor="let left_product of left_products; let i=index">
 
-    <div class="grid grid-cols-3 gap-4  mt-10">
+    <div class="grid lg:grid-cols-3 gap-4  mt-10 grid-cols-1">
 
-      <div class="container col-span-2 items-center">
+      <div class="container lg:col-span-2 items-center">
         <div class="font-segoe-ui text-5xl font-bold text-center">
           {{left_product.title}}</div>
         <p class="text-lg text-gray-500 font-serif text-center mt-3">
@@ -29,16 +29,16 @@
 
 
       <div class="container h-64">
-        <img class="order-last sm:order-first max-h-full" src={{left_product.image}} />
+        <img class="max-h-full mx-auto" src={{left_product.image}} />
       </div>
 
 
       <div *ngIf="right_products[i]?.image" class="container h-64">
-        <img class="max-h-full" src={{right_products[i].image}} />
+        <img class="max-h-full mx-auto" src={{right_products[i].image}} />
       </div>
 
 
-      <div *ngIf="right_products[i]?.title" class="container col-span-2">
+      <div *ngIf="right_products[i]?.title" class="container lg:col-span-2">
         <div class="font-segoe-ui text-5xl font-bold text-center">
           {{right_products[i].title}}</div>
         <p class="text-gray-500 text-lg font-serif text-center mt-3">
