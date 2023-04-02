@@ -11,7 +11,9 @@ export class products{
         {
             title: "Crisnat Developers",
             description: "This website is a guide and help to all the geeks who are beginner to coding. We provide solutions to coding problems free of cost. The guide is given in three languages: Java, Python and C. Also, the seeker can take help from the video tutorial provided from our youtube channel.",
-            image: "./assets/developer.png"
+            image: "./assets/developer.png",
+            preview: "https://developer.crisnat.com/",
+            previewtext:"Try Now"
         },
         {
             title: "Taaza Khabar",
