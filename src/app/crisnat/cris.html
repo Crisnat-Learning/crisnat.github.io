@@ -1,27 +1,32 @@
 <section>
-  <div class="container" >
-    <div class = "row">
-      <div class = "col-sm-2 col-md-6 col-lg-9">
-    <h1 style="margin-top: 20px;font-family: 'Segoe UI'; font-size: 80px; font-weight: bold;">
-      <br><br><br><br>Welcome<br><br><br> to <br><br><br>Crisnat!</h1>
-      <p style="font-size: 20px;">
-        <br><br><br><br>
-        Hey there! We welcome you to Crisnat! This platform provides tools to <br><br>make your life easier. 
-        We provide software solutions to real-world <br><br>problems.
-        This platform is intended for the individuals and as well as <br><br>the organisations if they want any software or website.
-        <br><br><br>
-        <a [routerLink]="['/products']"><button class="button">Learn More</button></a>
-        <a [routerLink]="['/about']"><button class ="button1">About</button></a>
-      </p>
+  <div class="container min-h-screen lg:pt-32 md:pt-20 sm:pt-20">
+    <div class="row flex flex-wrap">
+
+      <div class="col-sm-4 col-md-4 col-lg-4 lg:order-last relative">
+        <p>
+
+          <img class="h-auto min-w-full" src="./assets/logo.png" />
+        </p>
+      </div>
+
+
+      <div class="col-sm-8 col-md-8 col-lg-8 relative">
+        <p class="text-7xl text-center font-extrabold">Welcome to Crisnat!</p>
+
+        <p class="text-xl text-justify py-10 flex flex-wrap">
+          Hey there! We welcome you to Crisnat! <br />
+          This platform provides tools to make your life easier.<br />
+          We provide software solutions to real-world problems.<br />
+          This platform is intended for the individuals and as well as the organisations if they want any software or
+          website.
+          <a class="py-10" [routerLink]="['/products']"><button class="bg-darkturquoise text-white border-none px-8 py-4 text-center text-base text-xl font-medium hover:bg-purple-500 rounded-3xl">Learn More</button></a>
+          <a class="py-10" [routerLink]="['/about']"><button class="bg-white text-black border-none px-8 py-4 text-center text-base font-medium text-xl">About</button></a>
+        </p>
+
+      </div>
+
     </div>
-    <div class = "col-sm-3 col-md-3 col-lg-3">
-      <p>
-      <br><br><br><br><br><br>
-      <img align="right" src="./assets/logo.png" />
-    </p>
-    </div>
-  </div>
-  
-    
+
+
   </div>
 </section>

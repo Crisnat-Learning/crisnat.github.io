@@ -1,112 +1,56 @@
-<div class="container">
+<div class="container mb-40 mt-20">
   <div class="row">
-    <h1 style="margin-top: 20px;font-family: 'Segoe UI'; font-size: 80px; font-weight: bold; text-align: center;">
-      <br> Our Products</h1>
-    <p style="font-size: 20px ; color: gray; text-align: center;">
-      <br><br><br>
+    <div class="mt-20 font-segoe-ui text-7xl font-bold mb-10 text-center transform hover:rotate-x-12 hover:rotate-y-12 transition duration-500 ease-in-out perspective-1000">
+      Our Products
+    </div>
+    <p class="text-2xl text-gray-500 text-center">
       We have offered various free services, which includes android applications, blogs, coding solutions and many more!
-      <br><br>You can also download and enjoy them for free. some of them are listed below.
+      You can also download and enjoy them for free. some of them are listed below.
     </p>
   </div>
 </div>
 
+<div class="container mb-20 mx-auto max-w-full">
+  <div *ngFor="let left_product of left_products; let i=index">
+
+    <div class="grid lg:grid-cols-3 gap-4  mt-10 grid-cols-1">
+
+      <div class="container lg:col-span-2 items-center">
+        <div class="font-segoe-ui text-5xl font-bold text-center">
+          {{left_product.title}}</div>
+        <p class="text-lg text-gray-500 font-serif text-center mt-3">
+          {{left_product.description}}
+        </p>
+        <div *ngIf="left_product?.previewtext" class="bg-darkturquoise text-lg inline-block px-6 py-2 mt-10 element relative left-1/2 transform -translate-x-1/2">
+          <a href={{left_product.preview}} target="_blank"><button
+              class="text-white">{{left_product.previewtext}}</button></a>
+        </div>
+      </div>
 
 
-<div class="row">
-  <div class="col-lg-6 col-md-6 col-sm-6">
-    <h1 style="margin-top: 20px;font-family: 'Segoe UI'; font-size: 50px; font-weight: bold; text-align: center;padding-left: 10rem">
-      <br> Crisnat Developers</h1>
-    <p style="font-size: 20px ; color: gray; padding-left: 10rem; font-family: 'Times New Roman'; text-align: center;">
-      <br><br>
-      This website is a guide and help to all the geeks who are beginner to coding. We<br><br> provide solutions to coding
-      problems free of cost.
-      The guide is given in three <br><br> languages: Java, Python and C. Also, the seeker can take help from the video <br><br> tutorial
-      provided from our youtube channel.
-      <br><br>
-      <a href="https://developer.crisnat.com/" target="_blank"><button class="button-for-dev">Try Now</button></a>
-    </p>
-  </div>
-  <div class="col-lg-6 col-md-6 col-sm-6" style="align-items: center;padding-left: 15rem;">
-    <br><br>
-    <img src="./assets/developer.png" />
-  </div>
-</div>
+      <div class="container h-64">
+        <img class="max-h-full mx-auto" src={{left_product.image}} />
+      </div>
 
-<br><br><br><br><br>
 
-<div class="row">
-  <div class="col-lg-6 col-md-6 col-sm-6" style="align-items: center;padding-left: 15rem;">
-    <br><br>
-    <img src="./assets/driving.png" />
-  </div>
-  <div class="col-lg-6 col-md-6 col-sm-6">
-    <h1 style="margin-top: 20px;font-family: 'Segoe UI'; font-size: 50px; font-weight: bold; text-align: center;">
-      <br> Crisnat Driving Licence Status</h1>
-    <p style="font-size: 20px ; color: gray;  padding-left: 5rem; font-family: 'Times New Roman';text-align: center;">
-      <br><br>
-      This application is provides an easy way to track the status of driving licence status.<br><br>It uses the data from e-pariwahan government website. 
-      <br><br>
-      <a href="https://play.google.com/store/apps/details?id=com.crisnat.drivinglicenseapplicationstatus" target="_blank"><button class="button-for-dev">Try Now</button></a>
-    </p>
-  </div>
-</div>
+      <div *ngIf="right_products[i]?.image" class="container h-64">
+        <img class="max-h-full mx-auto" src={{right_products[i].image}} />
+      </div>
 
-<br><br><br><br><br>
 
-<div class="row">
-  <div class="col-lg-6 col-md-6 col-sm-6">
-    <h1 style="margin-top: 20px;font-family: 'Segoe UI'; font-size: 50px; font-weight: bold; text-align: center;padding-left: 10rem">
-      <br> Taaza Khabar</h1>
-    <p style="font-size: 20px ; color: gray; text-align:center; padding-left: 10rem; font-family: 'Times New Roman';">
-      <br><br>
-      This is and android application for latest news. The app also mentions the source <br><br>and date of the news. Also it has the search option so that the user can search any <br><br>news he desires.
-      <br><br>
-      <a href="https://play.google.com/store/apps/details?id=com.crisnat.taazakhabar" target="_blank"><button class="button-for-dev">Try Now</button></a>
-    </p>
-  </div>
-  <div class="col-lg-6 col-md-6 col-sm-6" style="align-items: center;padding-left: 15rem;">
-    <br><br>
-    <img src="./assets/taazakhabar.png" />
+      <div *ngIf="right_products[i]?.title" class="container lg:col-span-2">
+        <div class="font-segoe-ui text-5xl font-bold text-center">
+          {{right_products[i].title}}</div>
+        <p class="text-gray-500 text-lg font-serif text-center mt-3">
+          {{right_products[i].description}}
+        </p>
+        <div *ngIf="right_products[i]?.preview" class="bg-darkturquoise text-lg inline-block px-6 py-2 mt-10 element relative left-1/2 transform -translate-x-1/2">
+          <a href={{right_products[i].preview}} target="_blank"><button
+              class="text-white">{{right_products[i].previewtext}}</button></a>
+        </div>
+      </div>
+
+
+    </div>
   </div>
 </div>
-
-<br><br><br><br><br>
-
-<div class="row">
-  <div class="col-lg-6 col-md-6 col-sm-6" style="align-items: center;padding-left: 15rem;">
-    <br><br>
-    <img src="./assets/logo.png" />
-  </div>
-  <div class="col-lg-6 col-md-6 col-sm-6">
-    <h1 style="margin-top: 20px;font-family: 'Segoe UI'; font-size: 50px; font-weight: bold; text-align: center;padding-left: 10rem;">
-      <br> Sharotary</h1>
-    <p style="font-size: 20px ; color: gray; text-align:center; padding-left: 10rem; font-family: 'Times New Roman';">
-      <br><br>
-      This is and android application for writing stories. Yes, we listen you! People who <br><br> lack to talk to someone can share their thoughts and story here. 
-      <br><br>
-      <a href="https://developer.crisnat.com/" target="_blank"><button class="button-for-dev">Try Now</button></a>
-    </p>
-  </div>
-</div>
-
-<br><br><br><br><br>
-
-<div class="row">
-  <div class="col-lg-6 col-md-6 col-sm-6">
-    <h1 style="margin-top: 20px;font-family: 'Segoe UI'; font-size: 50px; font-weight: bold; text-align: center;padding-left: 10rem">
-      <br> Crisnat Learning</h1>
-    <p style="font-size: 20px ; color: gray; text-align:center; padding-left: 10rem; font-family: 'Times New Roman';">
-      <br><br>
-      This website provides the facts that are not known to us in general or is a mystry <br><br>till date! We love to explore in tech as well as the real world.
-      Some mystries have<br><br> been resolved and some is under research.
-      <br><br>
-      <a href="https://www.crisnat.com/" target="_blank"><button class="button-for-dev">Try Now</button></a>
-    </p>
-  </div>
-  <div class="col-lg-6 col-md-6 col-sm-6" style="align-items: center;padding-left: 15rem;">
-    <br><br>
-    <img src="./assets/logo.png" />
-  </div>
-</div>
-
-<br><br><br><br><br><br><br><br><br>
