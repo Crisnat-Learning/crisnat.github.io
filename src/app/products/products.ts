@@ -26,7 +26,7 @@ export class products{
             title: "Crisnat Learning",
             description: "This website provides the facts that are not known to us in general or is a mystry till date! We love to explore in tech as well as the real world. Some mystries have been resolved and some is under research.",
             image: "./assets/logo.png",
-            preview: "https://www.crisnat.com/",
+            preview: "https://blog.crisnat.com/",
             previewtext: "Try Now"
         }
     ];
