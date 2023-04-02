@@ -15,6 +15,6 @@ export class homepage{
     crisnatBlogUrl: SafeResourceUrl;
 
     constructor(private sanitizer: DomSanitizer) {
-        this.crisnatBlogUrl = this.sanitizer.bypassSecurityTrustResourceUrl("https://www.crisnat.com");
+        this.crisnatBlogUrl = this.sanitizer.bypassSecurityTrustResourceUrl("https://blog.crisnat.com");
     }
 }
