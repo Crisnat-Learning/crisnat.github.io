@@ -29,8 +29,8 @@ jobs:
       - name: copy file
         uses: canastro/copy-file-action@master
         with:
-          source: "deploy_dist/index.html"
-          target: "deploy_dist/404.html"
+          source: "deploy_dist/crisnat-web/index.html"
+          target: "deploy_dist/crisnat-web/404.html"
   deploy:
     runs-on: ubuntu-latest
     needs: build
