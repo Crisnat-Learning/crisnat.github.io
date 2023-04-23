@@ -3,7 +3,7 @@ name: Deploying Angular App
 on:
   push:
     branches:
-      - 'performance_boost'
+      - 'master'
 
 jobs:
   build:
